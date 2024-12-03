@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Calendar, Clock } from 'lucide-react';
 import { DaySchedule } from './DaySchedule';
 import { WeekendSchedule } from './WeekendSchedule';
 
 export function TimeTable() {
-    const [currentDay, setCurrentDay] = useState(new Date().getDay());
+    const [currentDay] = useState(new Date().getDay());
     const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
 
     useEffect(() => {
